@@ -16,5 +16,7 @@ let pokemonList=[
         height: 6
     }
 ];
+
 //following code is a for() loop function that cycles through the
 // pokemmonList array and displays the name and the height in feet.
+// adds a conditional to the loop if size greater than 5ft display special message
