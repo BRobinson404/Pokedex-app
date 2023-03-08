@@ -1,3 +1,4 @@
+//the following declares the pokemonList variable with an object array including name, type, and height.
 let pokemonList=[
     {
         name: 'Bulbasaur',
@@ -15,3 +16,5 @@ let pokemonList=[
         height: 6
     }
 ];
+//following code is a for() loop function that cycles through the
+// pokemmonList array and displays the name and the height in feet.
