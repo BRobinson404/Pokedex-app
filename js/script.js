@@ -23,3 +23,12 @@ let text='';
 for (let i=0; i< pokemonList.length; i++){
     text = ' ' + pokemonList[i].name + ' (height:' + pokemonList[i].height + 'ft)';
 // adds a conditional to the loop if size greater than 5ft display special message
+    if (pokemonList[i].height <5){
+        document.write(text)
+    }else if (pokemonList[i].height >5) {
+        document.write(text + " Wow, that’s big!")
+    }
+};
+
+
+
