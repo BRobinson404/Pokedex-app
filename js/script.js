@@ -17,11 +17,12 @@ let pokemonList=[
     }
 ];
 
-//following code is a for() loop function that cycles through the
+//following code is a foreach() function that cycles through the
 // pokemmonList array and displays the name and the height in feet.
-let text='';
-for (let i=0; i< pokemonList.length; i++){
-    text = ' ' + pokemonList[i].name + ' (height:' + pokemonList[i].height + 'ft)';
+function getPokemonList(pokemon) {
+    document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft.  ');
+}
+pokemonList.forEach(getPokemonList);
 // adds a conditional to the loop if size greater than 5ft display special message
     if (pokemonList[i].height <5){
         document.write(text)
