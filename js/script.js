@@ -37,7 +37,6 @@ let pokemonRepository = (function () {
 })()
 // uncomment to add object to pokemonRepository
 
-// pokemmonList array and displays the name and the height in feet.
 // pokemonRepository.add(
 // {
 //     name: 'Charizard',
