@@ -35,14 +35,14 @@ let pokemonRepository = (function () {
     }
     
 })()
+// uncomment to add object to pokemonRepository
 
-//following code is a foreach() function that cycles through the
 // pokemmonList array and displays the name and the height in feet.
-function getPokemonList(pokemon) {
-    document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft.  ');
-}
-pokemonList.forEach(getPokemonList);
-// adds a conditional to the loop if size greater than 5ft display special message
+// pokemonRepository.add(
+// {
+//     name: 'Charizard',
+//     type: ['fire','flying'],
+//     height: 5
 // })
 
 // uncomment to log the wrapped variable
