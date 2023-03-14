@@ -1,20 +1,5 @@
 let pokemonRepository = (function () {
 //the following declares the pokemonList variable with an object array including name, type, and height.
-let pokemonList=[
-    {
-        name: 'Bulbasaur',
-        type: ['grass', 'poison'],
-        height: 2
-    },
-    {
-        name: 'Ivysaur',
-        type: ['grass', 'poison'],
-        height: 3
-    },
-    {
-        name: 'Venusaur',
-        type: ['grass', 'poison'],
-        height: 6
     let pokemonList=[
         {
             name: 'Bulbasaur',
@@ -32,8 +17,19 @@ let pokemonList=[
             height: 6
         }
     ]
+    
+    function getAll () {
+        return pokemonList
     }
-];
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    return {
+        getAll: getAll,
+        add: add,
+    }
+    
 })()
 
 //following code is a foreach() function that cycles through the
