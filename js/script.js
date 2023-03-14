@@ -24,12 +24,4 @@ function getPokemonList(pokemon) {
 }
 pokemonList.forEach(getPokemonList);
 // adds a conditional to the loop if size greater than 5ft display special message
-    if (pokemonList[i].height <5){
-        document.write(text)
-    }else if (pokemonList[i].height >5) {
-        document.write(text + " Wow, that’s big!")
-    }
-};
-
-
 
