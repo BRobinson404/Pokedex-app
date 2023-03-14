@@ -17,6 +17,10 @@ let pokemonRepository = (function () {
             height: 6
         }
     ]
+    function getPokemonList(pokemon) {
+        document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft ');
+     }
+    pokemonList.forEach(getPokemonList);
     
     function getAll () {
         return pokemonList
