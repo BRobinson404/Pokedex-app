@@ -17,10 +17,6 @@ let pokemonRepository = (function () {
             height: 6
         }
     ]
-    function getPokemonList(pokemon) {
-        document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft ');
-     }
-    pokemonList.forEach(getPokemonList);
     
     function getAll () {
         return pokemonList
@@ -35,6 +31,10 @@ let pokemonRepository = (function () {
     }
     
 })()
+
+pokemonRepository.getAll().forEach(function(pokemon){
+    document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft ');
+})
 // uncomment to add object to pokemonRepository
 
 // pokemonRepository.add(
@@ -44,5 +44,5 @@ let pokemonRepository = (function () {
 //     height: 5
 // })
 
-// uncomment to log the wrapped variable
+// // uncomment to log the wrapped variable
 // console.log(pokemonRepository.getAll())
