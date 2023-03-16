@@ -74,15 +74,16 @@ let pokemonRepository = (function () {
     
 })();
 
-// uncomment to add object to pokemonRepository
 // uncomment the code below to add object to pokemonRepository
 
 // pokemonRepository.add(
-// {
-//     name: 'Charizard',
-//     type: ['fire','flying'],
-//     height: 5
-// })
+//     {
+//         name: 'Charizard',
+//         type: ['fire','flying'],
+//         height: 5
+//     });
+    
+// // uncomment to log wrapped pokemonList
+// console.log(pokemonRepository.getAll())
 
-// // uncomment to log the wrapped variable
-// console.log(pokemonRepository.getAll())//     {
+
