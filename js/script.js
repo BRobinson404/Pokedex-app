@@ -28,8 +28,17 @@ let pokemonRepository = (function () {
 //incorrect data from being added. if data is not a correctly formatted object the console will log "pokemon is not correct"
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
+        if (
+            typeof pokemon === "object" &&
+            "name" in pokemon &&
+            "height" in pokemon &&
+            "type" in pokemon 
+        ) {
+            pokemonList.push(pokemon);
+        }else{
+            console.log("pokemon is not correct")
+        }
+    };
 
 //the showDetails function is used to log the input pokemon chosen from the addListItem button below vv
 
