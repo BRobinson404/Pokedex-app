@@ -74,6 +74,7 @@ let pokemonRepository = (function () {
     };
     
 })()
+})();
 
 pokemonRepository.getAll().forEach(function(pokemon){
     document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft ');
