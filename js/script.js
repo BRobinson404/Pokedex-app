@@ -51,6 +51,18 @@ let pokemonRepository = (function () {
 //and appended to listItem and then listItem is appended to pokemonList. Lastly an event listener was added to 
 //display the pokemons name in the console with a click using the showDetails functions
 
+    function addListItem(pokemon){
+        let pokemonList = document.querySelector(".pokemon-list");
+        let listItem = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+        button.addEventListener('click', function showDetails(pokemonList) {
+            console.log(pokemon.name)
+        })
+    };
 //return block for the functions listed above in the IIFE
     return {
         getAll: getAll,
