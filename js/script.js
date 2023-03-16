@@ -42,6 +42,9 @@ let pokemonRepository = (function () {
 
 //the showDetails function is used to log the input pokemon chosen from the addListItem button below vv
 
+    function showDetails(pokemon){
+        console.log(pokemon)
+    };
 
 //The addListItem function creates 3 variables:the <ul> pokemon-list, listItem, and button the latter two are 
 //created in the DOM. The inner text for the button is then set to pokemon.name and given the class "button-class"
