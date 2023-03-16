@@ -74,9 +74,6 @@ let pokemonRepository = (function () {
     
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon){
-    document.write(pokemon.name + ' (' + pokemon.type + ') ' + pokemon.height + 'ft ');
-})
 // uncomment to add object to pokemonRepository
 // uncomment the code below to add object to pokemonRepository
 
