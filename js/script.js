@@ -68,6 +68,10 @@ let pokemonRepository = (function () {
         getAll: getAll,
         add: add,
     }
+        showDetails : showDetails,
+        addListItem : addListItem
+        
+    };
     
 })()
 
