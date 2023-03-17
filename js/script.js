@@ -31,7 +31,6 @@ let pokemonRepository = (function () {
             console.log(pokemon)
         });
     };
-
 //The addListItem function creates 3 variables:the <ul> pokemon-list, listItem, and button the latter two are 
 //created in the DOM. The inner text for the button is then set to pokemon.name and given the class "button-class"
 //and appended to listItem and then listItem is appended to pokemonList. Lastly an event listener was added to 
@@ -86,7 +85,6 @@ let pokemonRepository = (function () {
         getAll: getAll,
         add: add,
         showDetails : showDetails,
-        addListItem : addListItem
         addListItem : addListItem,
         loadList : loadList,
         loadDetails : loadDetails
@@ -95,23 +93,10 @@ let pokemonRepository = (function () {
     
 })();
 
-// uncomment the code below to add object to pokemonRepository
 
-pokemonRepository.add(
-    {
-        name: 'Charizard',
-        type: ['fire','flying'],
-        height: 5
 pokemonRepository.loadList().then(function () {
     pokemonRepository.getAll().forEach(function (pokemon) {
       pokemonRepository.addListItem(pokemon);
     });
-    
-// // uncomment to log wrapped pokemonList
-// console.log(pokemonRepository.getAll())
-
-pokemonRepository.getAll().forEach(function(pokemon){
-    pokemonRepository.addListItem(pokemon)
-});
   });
 
