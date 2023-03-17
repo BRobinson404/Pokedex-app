@@ -45,10 +45,27 @@ let pokemonRepository = (function () {
         button.classList.add("button-class");
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
-        button.addEventListener("click", function(event) {
+        button.addEventListener("click", function(pokemonList) {
             showDetails(pokemon);
           });
     };
+
+    function loadList() {
+        return fetch(apiUrl).then(function (response) {
+          return response.json();
+        }).then(function (json) {
+          json.results.forEach(function (item) {
+            let pokemon = {
+              name: item.name,
+              detailsUrl: item.url
+            };
+            add(pokemon);
+            console.log(pokemon);
+          });
+        }).catch(function (e) {
+          console.error(e);
+        })
+      };
 //return block for the functions listed above in the IIFE
     return {
         getAll: getAll,
