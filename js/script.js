@@ -66,6 +66,21 @@ let pokemonRepository = (function () {
           console.error(e);
         })
       };
+
+      function loadDetails(pokemon) {
+        let url = pokemon.detailsUrl;
+        return fetch(url).then(function (response) {
+          return response.json();
+        }).then(function (details) {
+          // Now we add the details to the item
+          pokemon.imageUrl = details.sprites.front_default;
+          pokemon.height = details.height;
+          pokemon.types = details.types;
+        }).catch(function (e) {
+          console.error(e);
+        });
+      };
+
 //return block for the functions listed above in the IIFE
     return {
         getAll: getAll,
