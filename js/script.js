@@ -102,6 +102,9 @@ pokemonRepository.add(
         name: 'Charizard',
         type: ['fire','flying'],
         height: 5
+pokemonRepository.loadList().then(function () {
+    pokemonRepository.getAll().forEach(function (pokemon) {
+      pokemonRepository.addListItem(pokemon);
     });
     
 // // uncomment to log wrapped pokemonList
@@ -110,4 +113,5 @@ pokemonRepository.add(
 pokemonRepository.getAll().forEach(function(pokemon){
     pokemonRepository.addListItem(pokemon)
 });
+  });
 
