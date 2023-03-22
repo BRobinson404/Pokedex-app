@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
 function add(pokemon) {
  if(
@@ -16,6 +16,7 @@ function add(pokemon) {
 function getAll() {
   return pokemonList;
 }
+
 function addListItem(pokemon){
   let pokemonList = document.querySelector(".pokemon-list");
   let listpokemon = document.createElement("li");
@@ -29,6 +30,7 @@ function addListItem(pokemon){
     showDetails(pokemon);
    });
 }
+
 function loadList() {
   return fetch(apiUrl).then(function (response) {
     return response.json();
@@ -109,12 +111,14 @@ function showDetails(item) {
 function hideModal (){
   modalContainer.classList.remove ('is-visible');
 }
+
 // hide modal if esc is pressed and is visible
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
     hideModal();
   }
 });
+
 // hide modal if container pressed
 modalContainer.addEventListener('click', (e) => {
 let target = e.target;
@@ -122,6 +126,7 @@ if (target === modalContainer) {
   hideModal();
 }
 });
+
 // show details if pokemon button is pressed
 document.querySelector ('button.button-class').addEventListener('click', () => {
   showDetails ('Modal Title', 'Modal Content');
