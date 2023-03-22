@@ -87,7 +87,7 @@ function showDetails(item) {
 
      for (let i = 0; i < item.types.length; i++) {
       
-      pokemonTypes += item.types[i].type.name;
+      pokemonTypes += item.types[i];
       
       if (i < item.types.length - 1) {
           pokemonTypes += ", ";
