@@ -29,6 +29,11 @@ let pokemonRepository = (function () {
     button.addEventListener('click', function () {
       showDetails(pokemon);
     });
+    }
+    
+    function showDetails(item) {
+      pokemonRepository.loadDetails(item).then(function () {
+        showModal(item);
       
       }
   }
