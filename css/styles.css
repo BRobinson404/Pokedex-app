@@ -1,3 +1,12 @@
+body {
     text-align: center;
+}
 
+h5 {
+    text-transform: capitalize;
+ }
 
+.pokemon-button {
+    text-transform: capitalize;
+    border-radius: 12px;
+}
