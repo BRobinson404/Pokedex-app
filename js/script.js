@@ -2,20 +2,9 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
-function add(pokemon) {
- if(
-  typeof pokemon === "object" &&
-  "name" in pokemon
- ) {
-  pokemonList.push(pokemon);
- } else {
-  console.log ("pokemon is not correct");
- }
-}
-
-function getAll() {
-  return pokemonList;
-}
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
 
 function addListItem(pokemon){
   let pokemonList = document.querySelector(".pokemon-list");
@@ -135,19 +124,18 @@ document.querySelector ('button.button-class').addEventListener('click', () => {
 }
 
 
-return {
-  add: add,
-  getAll: getAll,
-  addListItem: addListItem,
-  loadList: loadList,
-  loadDetails: loadDetails,
-  showDetails: showDetails
-  
-};
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem,
+    showDetails: showDetails,
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showModal: showModal
+  };
 })();
-
 pokemonRepository.loadList().then(function() {
-pokemonRepository.getAll().forEach(function(pokemon){
-  pokemonRepository.addListItem(pokemon);
+  pokemonRepository.getAll().forEach(function(pokemon){
+    pokemonRepository.addListItem(pokemon);
   });
 });
