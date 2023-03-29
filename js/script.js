@@ -6,31 +6,6 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
-function addListItem(pokemon){
-  let pokemonList = document.querySelector(".pokemon-list");
-  let listpokemon = document.createElement("li");
-  let button = document.createElement("button");
-  button.innerText = pokemon.name;
-  button.classList.add("button-class");
-  listpokemon.appendChild(button);
-  pokemonList.appendChild(listpokemon);
-  button.addEventListener("click", 
-  function(Event) {
-    showDetails(pokemon);
-   });
-}
-
-function loadList() {
-  return fetch(apiUrl).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    json.results.forEach(function (item) {
-      let pokemon = {
-        name: item.name,
-        detailsUrl: item.url
-      };
-      add(pokemon);
-      
     });
       
       }
