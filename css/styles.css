@@ -10,3 +10,7 @@ h5 {
     text-transform: capitalize;
     border-radius: 12px;
 }
+
+p {
+    text-transform: capitalize;
+}
