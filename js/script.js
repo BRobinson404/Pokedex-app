@@ -33,6 +33,25 @@ let pokemonRepository = (function () {
       }
   }
 
+  function showModal(pokemon) {
+    let modalBody = $(".modal-body");
+    let modalTitle = $(".modal-title");
+
+    modalTitle.empty();
+    modalBody.empty();
+
+    let pokemonName = $("<h1>" + pokemon.name + "</h1>")
+    let pokemonImage = $('<img class="modal-img" style="width:50%">');
+    pokemonImage.attr("src", pokemon.imageUrl);
+    let pokemonHeight = $("<p>" + "Height : " + pokemon.height + "</p>");
+    let pokemonTypes = $("<p>" + "Types : " + pokemon.types + "</p>")
+    
+    modalTitle.append(pokemonName);
+    modalBody.append(pokemonImage);
+    modalBody.append(pokemonHeight);
+    modalBody.append(pokemonTypes);
+  } 
+
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
