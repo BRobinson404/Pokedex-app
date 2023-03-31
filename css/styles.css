@@ -2,6 +2,49 @@ body {
     text-align: center;
 }
 
+.form-control {
+    max-width: 225px;
+    border-color: black;
+    height: auto;
+    width: auto;
+    margin: auto;
+    display: inline;
+}
+
+.form-inline {
+    max-width: 225px;
+    border-color: black;
+    height: auto;
+    width: auto;
+    margin: auto;
+    display: inline;
+}
+
+#search-input {
+    text-align: center;
+    border-radius: 12px;
+    flex-shrink: inherit;
+}
+
+.pokeball_decoration {
+    height: auto;
+    width: 30px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.pokeball_decoration2{
+    height: auto;
+    width: 30px;
+    display: inline-block;
+}
+
+.header__item {
+    max-width: 100%;
+    height:auto;
+    width: auto;
+}
+
 h5 {
     text-transform: capitalize;
  }
@@ -9,8 +52,13 @@ h5 {
 .pokemon-button {
     text-transform: capitalize;
     border-radius: 12px;
+    font-weight: bold;
 }
 
 p {
     text-transform: capitalize;
+}
+
+.footer-p{
+    font-weight: bold;
 }
