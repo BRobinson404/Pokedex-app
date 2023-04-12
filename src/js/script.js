@@ -1,6 +1,9 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=905';
+  let currentPage = 1;
+  let itemsPerPage = 150; // Number of items to display per page
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -124,6 +127,55 @@ let pokemonRepository = (function () {
     searchPokemon();
   });
 
+  
+  function showPage(page) {
+    let startIndex = (page - 1) * itemsPerPage;
+    let endIndex = page * itemsPerPage;
+    let pokemonListItems = document.querySelectorAll('.list-group-item');
+  
+    // Hide all Pokemon list items
+    pokemonListItems.forEach(function(pokemon, index) {
+      // Display only the first 150 Pokemon, hide the rest
+      if (index < endIndex && index >= startIndex) {
+        pokemon.style.display = 'inline-block';
+      } else {
+        pokemon.style.display = 'none';
+      }
+    });
+  
+    // Show only the items for the current page
+    // for (let i = startIndex; i < endIndex && i < pokemonListItems.length; i++) {
+    //   pokemonListItems[i].style.display = 'inline-block';
+    // }
+  }
+
+  // Function to display previous page
+  function showPreviousPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  }
+
+  // Function to display next page
+  function showNextPage() {
+    if (currentPage < Math.ceil(pokemonList.length / itemsPerPage)) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  }
+
+  // Function to initialize pagination buttons
+  function initializePaginationButtons() {
+    let previousButton = document.getElementById('previous-button');
+    let nextButton = document.getElementById('next-button');
+
+    previousButton.addEventListener('click', showPreviousPage);
+    nextButton.addEventListener('click', showNextPage);
+  }
+
+  // Call the function to initialize pagination buttons
+  initializePaginationButtons();
   return {
     add: add,
     getAll: getAll,
