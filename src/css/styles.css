@@ -12,24 +12,25 @@ body {
     display: inline;
 }
 
-.fixed-header {
-    position: fixed;
-    opacity: 100%;
-    fill: white;
-    fill-opacity:100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    /* Add any additional styles as needed */
-  }
 
 .custom-button {
     background: none;
     border: none;
     max-width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
   }
 
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width: 767px) {
+    .custom-button {
+      width: 100px;
+    }
+  }
   #previous-button,
   #next-button {
     /* Remove default Bootstrap styles */
@@ -49,12 +50,9 @@ body {
     background-color: transparent;
     height: auto;
     width: auto;
-    margin: auto;;
+    margin: auto;
   }
 
-  #previous-button {
-    padding-right: 20px;
-  }
 
 .form-inline {
     max-width: 225px;
