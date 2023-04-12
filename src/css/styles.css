@@ -1,15 +1,60 @@
 body {
     text-align: center;
+    min-width: 465;
 }
 
 .form-control {
-    max-width: 225px;
+    max-width: 500px;
     border-color: black;
     height: auto;
     width: auto;
-    margin: auto;
+    margin: none;
     display: inline;
 }
+
+.fixed-header {
+    position: fixed;
+    opacity: 100%;
+    fill: white;
+    fill-opacity:100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    /* Add any additional styles as needed */
+  }
+
+.custom-button {
+    background: none;
+    border: none;
+    max-width: 100%;
+  }
+
+  #previous-button,
+  #next-button {
+    /* Remove default Bootstrap styles */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  #previous-button:hover,
+  #next-button:hover {
+    /* Remove hover effect */
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    margin: auto;;
+  }
+
+  #previous-button {
+    padding-right: 20px;
+  }
 
 .form-inline {
     max-width: 225px;
@@ -20,24 +65,16 @@ body {
     display: inline;
 }
 
+.button-size {
+    font-size: 18px;
+  }
+
 #search-input {
     text-align: center;
     border-radius: 12px;
     flex-shrink: inherit;
 }
 
-.pokeball_decoration {
-    height: auto;
-    width: 30px;
-    display: inline-block;
-    margin-right: 8px;
-}
-
-.pokeball_decoration2{
-    height: auto;
-    width: 30px;
-    display: inline-block;
-}
 
 .header__item {
     max-width: 100%;
@@ -59,6 +96,8 @@ p {
     text-transform: capitalize;
 }
 
-.footer-p{
-    font-weight: bold;
+.header_link{
+    align-items: center;
+    color: slategrey;
+    font-style:normal
 }
