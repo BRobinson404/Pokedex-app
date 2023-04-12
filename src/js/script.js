@@ -188,6 +188,20 @@ let pokemonRepository = (function () {
 
   // Call the function to initialize pagination buttons
   initializePaginationButtons();
+  
+  function makeHeaderFixed() {
+    let header = document.querySelector('header');
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 0) {
+        header.classList.add('fixed-header');
+      } else {
+        header.classList.remove('fixed-header');
+      }
+    });
+  }
+  
+  makeHeaderFixed();
+
   return {
     add: add,
     getAll: getAll,
