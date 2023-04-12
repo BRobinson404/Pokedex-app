@@ -8,20 +8,25 @@
     <link rel="stylesheet" type="text/css" href="dist/css/styles.min.css" />
     <title>Simple JS Pokédex</title>
   </head>
-  <header>
-    <a href="index.html">
-      <img src="img/pokedex_title.png" alt="title" class="header__item">
-    </a>
-    <div>
-      <form class="form-inline">
-        <img src="img/pokeball.png" class="pokeball_decoration">
-        <input id="search-input" class="pokemon-search form-control mr-sm-2" type="search" placeholder="Search Pokémon" aria-label="Search">
-        <img src="img/pokeball.png" class="pokeball_decoration2">
-      </form>
-    </div>
-  </header>
-  <br>
   <body>
+    <header class=".header">
+      <div>
+      <a href="index.html">
+        <img src="img/pokedex_title.png" alt="title" class="header__item">
+      </a>
+      </div>
+      <div>
+        <!-- Previous Button -->
+        <button id="previous-button" class="btn btn-primary custom-button">
+          <img src="img/previous_button.png" height="auto" width="100px" alt="Previous" class="pokeball_button">
+        </button>
+        <form class="form-inline">
+          <input id="search-input" class="pokemon-search form-control mr-sm-2" type="search" placeholder="Search Pokémon" aria-label="Search">
+        </form>
+        <!-- Next Button -->
+        <button id="next-button" class="btn btn-primary custom-button">
+          <img src="img/next_button.png" height="auto" width="100px" alt="Next" class="pokeball_button">
+        </button>
     <ul class="list-group container">
       <div class="pokemon-list row"></div> 
     </ul>
