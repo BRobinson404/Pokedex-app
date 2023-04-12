@@ -70,6 +70,15 @@ let pokemonRepository = (function () {
       modalBody.append(pokemonAbilities); // New code to append abilities
     }
     
+    function getAbilities(abilities) {
+      let abilitiesElement = document.createElement('p');
+      let finalString = 'Abilities: ';
+      abilities.forEach( ability => {
+        finalString += ability.ability.name + ' ';
+      });
+      abilitiesElement.innerText = finalString;
+      return abilitiesElement;
+    }
 
   function loadList() {
     return fetch(apiUrl).then(function (response) {
@@ -95,6 +104,7 @@ let pokemonRepository = (function () {
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
+      item.abilities = details.abilities; // New code to add abilities
     }).catch(function (e) {
       console.error(e);
     });
