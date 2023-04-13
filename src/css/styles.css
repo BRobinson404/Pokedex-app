@@ -14,28 +14,19 @@ body {
     display: inline;
 }
 
+.pokeball_button {
+  flex-shrink: 1;
+    flex-grow: 0;
+    margin: auto;
+    padding: auto;
+    box-shadow: none;
+}
 
 .custom-button {
     background: none;
     border: none;
     flex-shrink: 1;
-    flex-grow: 1;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-    flex-shrink: 1;
-  }
-  
-  @media (max-width: 500px) {
-    .custom-button {
-      width: 1px;
-    }
-  }
-  #previous-button,
-  #next-button {
-    /* Remove default Bootstrap styles */
+    flex-grow: 0;
     background-color: transparent;
     border: none;
     outline: none;
@@ -46,8 +37,27 @@ body {
     max-width: 100%;
   }
 
-  #previous-button:hover,
-  #next-button:hover {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+  }
+  
+  @media (max-width: 500px) {
+    .custom-button, .pokeball_button {
+      width: 1px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      height: auto;
+      width: auto;
+      margin: auto;
+      max-width: 100%;
+    }
+  }
+
+  .pokeball-button, .custom-button:hover{
     /* Remove hover effect */
     background-color: transparent;
     height: auto;
