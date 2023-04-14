@@ -115,3 +115,75 @@ p {
   color: slategrey;
   font-style: normal;
 }
+
+.modal-header {
+  background-color: #f44336;
+  color: #fff;
+  text-align: center;
+  border-bottom: none;
+}
+
+/* Style for modal title */
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+/* Style for modal body */
+.modal-body {
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* Style for modal image */
+.modal-img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Style for modal types and abilities */
+.modal-body p {
+  margin-bottom: 8px;
+}
+
+/* Style for modal footer */
+.modal-footer {
+  border-top: none;
+}
+
+/* Style for modal close button */
+.close {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Style for Pokéball design */
+.modal-header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid #000;
+}
+
+.modal-header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+}
