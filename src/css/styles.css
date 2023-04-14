@@ -1,113 +1,134 @@
+/* Body styles */
 body {
-    text-align: center;
-    min-width: 465;
-    margin-left: 30px;
-    margin-right: 20px;
+  text-align: center;
+  min-width: 465px; /* Added unit(px) to min-width value */
+  margin-left: 35px;
+  margin-right: 20px;
 }
 
+/* Form control styles */
 .form-control {
-    max-width: 100%;
-    border-color: black;
-    height: auto;
-    width: auto;
-    margin: none;
-    display: inline;
+  max-width: 100%;
+  border-color: black;
+  height: auto;
+  width: auto;
+  margin: 0; /* Changed 'none' to '0' for margin */
+  display: inline;
 }
 
+/* Pokeball button styles */
 .pokeball_button {
   flex-shrink: 1;
-    flex-grow: 0;
-    margin: auto;
-    padding: auto;
-    box-shadow: none;
+  flex-grow: 0;
+  margin: auto;
+  padding: 0; 
+  box-shadow: none;
 }
 
+/* Custom button styles */
 .custom-button {
-    background: none;
-    border: none;
-    flex-shrink: 1;
-    flex-grow: 0;
+  background: none;
+  border: none;
+  flex-shrink: 1;
+  flex-grow: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  height: auto;
+  width: auto;
+  margin: auto;
+  max-width: 100%;
+}
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+}
+
+/* Media query for responsive styles */
+@media (min-width: 100px) and (max-width: 500px) {
+  .custom-button {
     background-color: transparent;
     border: none;
     outline: none;
     box-shadow: none;
     height: auto;
     width: auto;
-    margin: auto;
+    margin-left: 35px;
+    margin-right: 20px;
     max-width: 100%;
   }
 
-  .button-container {
-    display: flex;
-    justify-content: center;
+  .pokeball_button {
     flex-shrink: 1;
-  }
-  
-  @media (max-width: 500px) {
-    .custom-button, .pokeball_button {
-      width: 1px;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      height: auto;
-      width: auto;
-      margin: auto;
-      max-width: 100%;
-    }
-  }
-
-  .pokeball-button, .custom-button:hover{
-    /* Remove hover effect */
-    background-color: transparent;
-    height: auto;
-    width: auto;
+    flex-grow: 0;
     margin: auto;
+    padding: 0;
+    box-shadow: none;
+    min-width: 90px;
   }
+}
 
+/* Hover styles for pokeball button and custom button */
+.pokeball-button, .custom-button:hover {
+  background-color: transparent;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
 
+/* Form inline styles */
 .form-inline {
-    max-width: 225px;
-    border-color: black;
-    height: auto;
-    width: auto;
-    margin: auto;
-    display: inline;
+  max-width: 225px;
+  border-color: black;
+  height: auto;
+  width: auto;
+  margin: auto;
+  display: inline;
 }
 
+/* Button size styles */
 .button-size {
-    font-size: 18px;
-  }
+  font-size: 18px;
+}
 
+/* Search input styles */
 #search-input {
-    text-align: center;
-    border-radius: 12px;
-    flex-shrink: inherit;
+  text-align: center;
+  border-radius: 12px;
+  flex-shrink: inherit;
 }
 
-
+/* Header item styles */
 .header__item {
-    max-width: 100%;
-    height:auto;
-    width: auto;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
+/* Heading styles */
 h5 {
-    text-transform: capitalize;
- }
+  text-transform: capitalize;
+}
 
+/* Pokemon button styles */
 .pokemon-button {
-    text-transform: capitalize;
-    border-radius: 12px;
-    font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 12px;
+  font-weight: bold;
 }
 
+/* Paragraph styles */
 p {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
-.header_link{
-    align-items: center;
-    color: slategrey;
-    font-style:normal
+/* Header link styles */
+.header_link {
+  align-items: center;
+  color: slategrey;
+  font-style: normal;
 }
