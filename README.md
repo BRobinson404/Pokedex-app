@@ -8,7 +8,7 @@ The app fetches data from PokéAPI to display Pokémon as a list of buttons, eac
 
 ## View
 
-[Deployed Pokédex](https://github.com/BRobinson404/simple-js-app/)
+[Deployed Pokédex](https://brobinson404.github.io/simple-js-app/)
 
 ## Languages
 - HTML
