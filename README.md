@@ -23,3 +23,9 @@ The app fetches data from PokéAPI to display Pokémon as a list of buttons, eac
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 ## Interface
+Homescreen
+![image](https://github.com/BRobinson404/Pokedex-app/assets/122922678/9c67bdd0-33bc-4724-8091-b8b1fde537a1)
+
+Pokedex Entry
+![image](https://github.com/BRobinson404/Pokedex-app/assets/122922678/cebb4530-ba60-4c10-92b6-ae199394145c)
+
